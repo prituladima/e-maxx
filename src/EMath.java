@@ -1,9 +1,9 @@
-public final class EMaxxMath {
+final class EMath {
 
-    private EMaxxMath() {
+    private EMath() {
     }
 
-    public static int phi(int n) {
+    static int phi(int n) {
         int result = n;
         for (int i = 2; i * i <= n; i++) {
             if (n % i == 0) {
@@ -18,7 +18,14 @@ public final class EMaxxMath {
 
     }
 
-    public static int gcd(int a, int b) {
+    static boolean is_prime(int n) {
+        for (int i = 2; i * i <= n; i++)
+            if (n % i == 0)
+                return false;
+        return true;
+    }
+
+    static int gcd(int a, int b) {
         if (b == 0) return a;
         else return gcd(b, a % b);
     }

@@ -1,12 +1,9 @@
-/**
- * Created by prituladima on 4/17/18.
- */
-public class EMaxxMathLong {
+final class EMathLong {
 
-    private EMaxxMathLong() {
+    private EMathLong() {
     }
 
-    public static long phi(long n) {
+    static long phi(long n) {
         long result = n;
         for (long i = 2; i * i <= n; i++) {
             if (n % i == 0) {
@@ -18,17 +15,16 @@ public class EMaxxMathLong {
         if (n > 1)
             result -= result / n;
         return result;
-
     }
 
-    static boolean isPrime(int n) {
+    static boolean is_prime(int n) {
         for (int i = 2; i * i <= n; i++)
             if (n % i == 0)
                 return false;
         return true;
     }
 
-    public static long gcd(long a, long b) {
+    static long gcd(long a, long b) {
         if (b == 0) return a;
         else return gcd(b, a % b);
     }

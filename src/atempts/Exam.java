@@ -1,3 +1,5 @@
+package atempts;
+
 import java.util.Scanner;
 
 public class Exam {
