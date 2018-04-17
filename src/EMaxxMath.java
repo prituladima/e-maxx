@@ -1,6 +1,7 @@
-final class EMaxxMath {
+public final class EMaxxMath {
 
-    private EMaxxMath() {}
+    private EMaxxMath() {
+    }
 
     public static int phi(int n) {
         int result = n;
@@ -15,6 +16,11 @@ final class EMaxxMath {
             result -= result / n;
         return result;
 
+    }
+
+    public static int gcd(int a, int b) {
+        if (b == 0) return a;
+        else return gcd(b, a % b);
     }
 
 }
